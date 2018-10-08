@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Wolf.Interaction;
+using Wolf.Events;
 
 public class InteractionPorte : ZoneInteraction
 {
@@ -11,9 +12,11 @@ public class InteractionPorte : ZoneInteraction
     public AudioClip sonPorteOuvrir;
     public AudioClip sonPorteFermer;
     private AudioSource audioSource;
+    public BoolEvent OnPorteInteraction;
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        OnPorteInteraction = new BoolEvent();
     }
     public override void Interagir()
     {
@@ -41,6 +44,8 @@ public class InteractionPorte : ZoneInteraction
             if (audioSource.clip != null)
                 audioSource.Play();
         }
+        // Invoke l'évènement en lui passant l'état de la porte en bool
+        OnPorteInteraction.Invoke(porteOuverte);
     }
     private IEnumerator AttendreFinAnimationPorte(float temps)
     {

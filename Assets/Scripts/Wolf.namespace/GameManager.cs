@@ -37,7 +37,9 @@ namespace Wolf
         public void Initialisation()
         {
             uiManager.Initialisation();
+            soundManager.Initialisation();
             timeManager.Initialisation();
+            popupManager.Initialisation();
         }
 
         public void RamasserObjet(TypeObjet typeObjet)
