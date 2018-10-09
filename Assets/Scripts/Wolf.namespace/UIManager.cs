@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // TextMeshPro
 using Wolf.Interaction;
+using Wolf.Interaction.Ramassable;
 
 namespace Wolf
 {
@@ -20,7 +21,6 @@ namespace Wolf
             if (objetSelectionner != null)
             {
                 texte_interaction.gameObject.SetActive(true);
-
                 if (objetSelectionner.GetType() == typeof(InteractionPorte))
                 {
                     InteractionPorte objet = objetSelectionner as InteractionPorte;
