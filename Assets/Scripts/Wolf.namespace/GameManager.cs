@@ -27,6 +27,7 @@ namespace Wolf
         public TextManager textManager;
         public TimeManager timeManager;
         public PopupManager popupManager;
+        public DialogueManager dialogueManager;
         public UIManager uiManager;
 
         private void Start()

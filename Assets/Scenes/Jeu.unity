@@ -1958,7 +1958,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419254272}
   m_LocalRotation: {x: -0.000000022576033, y: 0.7198433, z: -0.000000025772955, w: 0.6941366}
-  m_LocalPosition: {x: -384.2, y: 3.78, z: 115.5}
+  m_LocalPosition: {x: -374.08, y: 15.6, z: 192.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 547091886}
@@ -3581,12 +3581,12 @@ GameObject:
   m_Component:
   - component: {fileID: 815656477}
   m_Layer: 0
-  m_Name: npc_cube (1)
+  m_Name: Slender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &876843228
 GameObject:
   m_ObjectHideFlags: 0
@@ -4130,6 +4130,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -166.76201
       objectReference: {fileID: 0}
+    - target: {fileID: 1905523250753638, guid: d1f0656d0d6cd914e841644e92a5774f, type: 2}
+      propertyPath: m_TagString
+      value: interactif
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1f0656d0d6cd914e841644e92a5774f, type: 2}
   m_IsPrefabAsset: 0
@@ -4138,6 +4142,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4758421436973298, guid: d1f0656d0d6cd914e841644e92a5774f,
     type: 2}
   m_PrefabInternal: {fileID: 898507580}
+--- !u!1 &898507582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1905523250753638, guid: d1f0656d0d6cd914e841644e92a5774f,
+    type: 2}
+  m_PrefabInternal: {fileID: 898507580}
+--- !u!114 &898507583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898507582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ce02b1eee98044c895af0b05db5ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peutEtreUtiliser: 1
 --- !u!1 &908707449
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,6 +4337,8 @@ GameObject:
   - component: {fileID: 963845473}
   - component: {fileID: 963845472}
   - component: {fileID: 963845471}
+  - component: {fileID: 963845476}
+  - component: {fileID: 963845475}
   - component: {fileID: 963845474}
   m_Layer: 0
   m_Name: GameManager
@@ -4341,6 +4364,7 @@ MonoBehaviour:
   textManager: {fileID: 963845473}
   timeManager: {fileID: 963845471}
   popupManager: {fileID: 981840131}
+  dialogueManager: {fileID: 0}
   uiManager: {fileID: 2101124528}
 --- !u!4 &963845470
 Transform:
@@ -4487,6 +4511,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &963845475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963845468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f486e45414b69449a75f9151b36981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &963845476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963845468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294fdedf40e4edb49a4ac69d195a34c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &981840130
 GameObject:
   m_ObjectHideFlags: 0
@@ -7069,7 +7115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesseMarche: 4
   vitesseCourse: 7
-  sensibiliterSouris: 1
+  sensibiliterSouris: 2
   controlesPossibles: 1
   bloquerSouris: 1
   animBras: {fileID: 6298516}
