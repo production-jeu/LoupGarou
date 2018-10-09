@@ -29,8 +29,8 @@ namespace Wolf
             listePopups = new List<Action>();
             if (debug)
             {
-                AjouterDemandePopup(() => { AfficherPopup(_PopupTest); _PopupTest.ChangerTexte("1"); });
-                AjouterDemandePopup(() => { AfficherPopup(_PopupTest); _PopupTest.ChangerTexte("2"); });
+                AjouterDemandePopup(_PopupTest);
+                AjouterDemandePopup(_PopupTest);
             }
         }
         public void AfficherPopup(Popup popup)
@@ -40,9 +40,9 @@ namespace Wolf
             GameManager.instance.joueur.controlesPossibles = false;
             MouseManager.SetMouse(false);
         }
-        public void AjouterDemandePopup(Action fonctionAppelPopup)
+        public void AjouterDemandePopup(Popup popup)
         {
-            listePopups.Add(fonctionAppelPopup);
+            listePopups.Add(()=> { AfficherPopup(popup); });
             if (popupActuel == null)
                 AfficherProchainPopup();
         }

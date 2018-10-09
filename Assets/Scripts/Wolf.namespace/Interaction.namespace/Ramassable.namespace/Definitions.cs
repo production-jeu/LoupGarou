@@ -4,5 +4,5 @@ using UnityEngine;
 
 namespace Wolf.Interaction.Ramassable
 {
-    public enum TypeObjet { PIECE_ARGENT };
+    public enum TypeObjet { PIECE_ARGENT, PARCHEMIN_COLLECTIBLE };
 }

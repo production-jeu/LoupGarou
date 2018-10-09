@@ -4,13 +4,12 @@ using UnityEngine;
 
 namespace Wolf.Interaction.Ramassable
 {
-    public class ObjetRamassable : ZoneInteraction
+    public class ParcheminCollectible : ObjetRamassable
     {
-        public TypeObjet typeObjet;
         public override void Interagir()
         {
-            base.Interagir();
-            GameManager.instance.RamasserObjet(typeObjet);
+            var popupManager = GameManager.instance.popupManager;
+            popupManager.AjouterDemandePopup(popupManager._PopupTest);
             Destroy(gameObject);
         }
     }
