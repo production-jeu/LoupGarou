@@ -12,7 +12,7 @@ namespace Wolf.Follow
         private void Start()
         {
             rg = GetComponent<Rigidbody>();
-            transformJoueur = GameManager.instance.joueur.transform;
+            transformJoueur = GameManager.inst.joueur.transform;
         }
         void Update()
         {

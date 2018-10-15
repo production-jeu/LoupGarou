@@ -21,7 +21,7 @@ namespace Wolf.Batiments
                 FadeSonAmbiance();
             });
             zoneInterieur.OnZoneLeave.AddListener(() => {
-                GameManager.instance.soundManager.VolumeFade(0.8f);
+                GameManager.inst.soundManager.VolumeFade(0.8f);
             });
             porte.OnPorteInteraction.AddListener((porteOuverte)=> {
                 Debug.Log("Porte interaction");
@@ -36,12 +36,12 @@ namespace Wolf.Batiments
             if (batimentOuvert)
             {
                 //Debug.Log("0.5f");
-                GameManager.instance.soundManager.VolumeFade(0.43f);
+                GameManager.inst.soundManager.VolumeFade(0.43f);
             }
             else
             {
                 //Debug.Log("0.2f");
-                GameManager.instance.soundManager.VolumeFade(0.2f);
+                GameManager.inst.soundManager.VolumeFade(0.2f);
             }
         }
     }

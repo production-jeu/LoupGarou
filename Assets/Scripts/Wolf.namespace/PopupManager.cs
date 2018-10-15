@@ -16,6 +16,7 @@ namespace Wolf
         public List<Action> listePopups;  // Listes des popups dans l'ordre qu'il faut les afficher
 
         public PopupTest _PopupTest;
+        public PopupParchemin _PopupParchemin;
         private void Update()
         {
             if(popupActuel != null)
@@ -30,19 +31,25 @@ namespace Wolf
             if (debug)
             {
                 AjouterDemandePopup(_PopupTest);
-                AjouterDemandePopup(_PopupTest);
+                AjouterDemandePopup(_PopupParchemin);
             }
         }
         public void AfficherPopup(Popup popup)
         {
             popupActuel = popup;
             popup.AfficherPopup();
-            GameManager.instance.joueur.controlesPossibles = false;
+            GameManager.inst.joueur.controlesPossibles = false;
             MouseManager.SetMouse(false);
         }
         public void AjouterDemandePopup(Popup popup)
         {
             listePopups.Add(()=> { AfficherPopup(popup); });
+            if (popupActuel == null)
+                AfficherProchainPopup();
+        }
+        public void AjouterDemandePopup(Action action)
+        {
+            listePopups.Add(action);
             if (popupActuel == null)
                 AfficherProchainPopup();
         }
@@ -58,7 +65,7 @@ namespace Wolf
         {
             popupActuel.FermerPopup();
             popupActuel = null;
-            GameManager.instance.joueur.controlesPossibles = true;
+            GameManager.inst.joueur.controlesPossibles = true;
             MouseManager.SetMouse(true);
             if (afficherProchainPopup)
                 AfficherProchainPopup();

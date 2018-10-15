@@ -60,12 +60,12 @@ namespace Wolf
                     if (t_objSelectionner.peutEtreUtiliser)
                     {
                         objetSelectionner = t_objSelectionner;
-                        GameManager.instance.uiManager.UpdateSelection(objetSelectionner);
+                        GameManager.inst.uiManager.UpdateSelection(objetSelectionner);
                     }
                 }
                 else
                 {
-                    GameManager.instance.uiManager.UpdateSelection(t_objSelectionner);
+                    GameManager.inst.uiManager.UpdateSelection(t_objSelectionner);
                 }
             });
         }

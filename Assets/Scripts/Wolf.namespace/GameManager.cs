@@ -14,10 +14,10 @@ namespace Wolf
     {
 
         #region Singleton
-        public static GameManager instance;
+        public static GameManager inst; // Instance statique
         private void Awake()
         {
-            instance = this;
+            inst = this;
         }
         #endregion
 
@@ -41,6 +41,10 @@ namespace Wolf
             soundManager.Initialisation();
             timeManager.Initialisation();
             popupManager.Initialisation();
+            textManager.Initialisation();
+            // Fade onStart
+            //uiManager.image_fondNoir.gameObject.SetActive(true);
+            //uiManager.image_fondNoir.GetComponent<Animator>().Play("anim_nouveauJour", -1, 0);
         }
 
         public void RamasserObjet(TypeObjet typeObjet)

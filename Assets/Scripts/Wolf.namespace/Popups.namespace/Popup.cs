@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Wolf.Popups
 {
-    public class Popup : MonoBehaviour
+    public abstract class Popup : MonoBehaviour
     {
         public virtual void AfficherPopup()
         {
@@ -14,5 +14,6 @@ namespace Wolf.Popups
         {
             gameObject.SetActive(false);
         }
+        //public abstract void UpdateValeurs();
     }
 }

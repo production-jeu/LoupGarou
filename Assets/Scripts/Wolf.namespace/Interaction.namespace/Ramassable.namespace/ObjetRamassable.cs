@@ -10,7 +10,7 @@ namespace Wolf.Interaction.Ramassable
         public override void Interagir()
         {
             base.Interagir();
-            GameManager.instance.RamasserObjet(typeObjet);
+            GameManager.inst.RamasserObjet(typeObjet);
             Destroy(gameObject);
         }
     }

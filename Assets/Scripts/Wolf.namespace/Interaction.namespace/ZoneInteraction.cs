@@ -9,7 +9,7 @@ namespace Wolf.Interaction
         public bool peutEtreUtiliser = true;      // Définit si cet Zone d'interaction peut présentement avoir une interaction du joueur
         public virtual void Interagir()
         {
-            GameManager.instance.uiManager.UpdateSelection(null);
+            GameManager.inst.uiManager.UpdateSelection(null);
         }
     }
 }
