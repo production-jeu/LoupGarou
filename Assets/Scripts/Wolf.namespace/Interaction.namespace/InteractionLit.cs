@@ -10,7 +10,7 @@ namespace Wolf.Interaction
         {
             Debug.Log("Interaction avec objet lit!");
             // Dormir
-            GameManager.instance.JoueurDormir();
+            GameManager.inst.JoueurDormir();
         }
     }
 }
