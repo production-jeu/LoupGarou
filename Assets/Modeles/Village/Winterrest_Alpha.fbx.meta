@@ -1,0 +1,411 @@
+fileFormatVersion: 2
+guid: 617d987f74556374b9e11322a15d9fb2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Chateau
+    100002: Galerie
+    100004: Mur1
+    100006: Mur1 1
+    100008: Mur1 2
+    100010: Mur1 3
+    100012: Mur1 4
+    100014: Mur1 5
+    100016: Mur1 6
+    100018: Mur1 7
+    100020: Mur1 8
+    100022: Mur10
+    100024: Mur11
+    100026: Mur2
+    100028: Mur3
+    100030: Mur5
+    100032: Mur6
+    100034: Mur7
+    100036: Mur8
+    100038: Mur9
+    100040: pCylinder10
+    100042: pCylinder11
+    100044: pCylinder12
+    100046: pCylinder13
+    100048: pCylinder14
+    100050: pCylinder15
+    100052: pCylinder16
+    100054: pCylinder17
+    100056: pCylinder2
+    100058: pCylinder4
+    100060: pCylinder5
+    100062: pCylinder6
+    100064: pCylinder7
+    100066: pCylinder8
+    100068: pCylinder9
+    100070: Poutre
+    100072: Poutre 1
+    100074: Poutre 2
+    100076: Poutre 3
+    100078: Poutre 4
+    100080: Poutre 5
+    100082: Poutre 6
+    100084: Poutre 7
+    100086: Poutre11
+    100088: Poutre11 1
+    100090: Poutre11 2
+    100092: Poutre11 3
+    100094: Poutre12
+    100096: Poutre12 1
+    100098: Poutre12 2
+    100100: Poutre12 3
+    100102: Poutre12 4
+    100104: Poutre6
+    100106: Poutre6 1
+    100108: Poutre6 2
+    100110: Poutre6 3
+    100112: Poutre6 4
+    100114: Poutre6 5
+    100116: Poutre6 6
+    100118: Poutre6 7
+    100120: sol
+    100122: Tour
+    100124: Tour1
+    100126: Tour2
+    100128: Tour3
+    100130: Tour4
+    100132: Tour5
+    100134: tourelle
+    100136: Tout0
+    100138: //RootNode
+    400000: Chateau
+    400002: Galerie
+    400004: Mur1
+    400006: Mur1 1
+    400008: Mur1 2
+    400010: Mur1 3
+    400012: Mur1 4
+    400014: Mur1 5
+    400016: Mur1 6
+    400018: Mur1 7
+    400020: Mur1 8
+    400022: Mur10
+    400024: Mur11
+    400026: Mur2
+    400028: Mur3
+    400030: Mur5
+    400032: Mur6
+    400034: Mur7
+    400036: Mur8
+    400038: Mur9
+    400040: pCylinder10
+    400042: pCylinder11
+    400044: pCylinder12
+    400046: pCylinder13
+    400048: pCylinder14
+    400050: pCylinder15
+    400052: pCylinder16
+    400054: pCylinder17
+    400056: pCylinder2
+    400058: pCylinder4
+    400060: pCylinder5
+    400062: pCylinder6
+    400064: pCylinder7
+    400066: pCylinder8
+    400068: pCylinder9
+    400070: Poutre
+    400072: Poutre 1
+    400074: Poutre 2
+    400076: Poutre 3
+    400078: Poutre 4
+    400080: Poutre 5
+    400082: Poutre 6
+    400084: Poutre 7
+    400086: Poutre11
+    400088: Poutre11 1
+    400090: Poutre11 2
+    400092: Poutre11 3
+    400094: Poutre12
+    400096: Poutre12 1
+    400098: Poutre12 2
+    400100: Poutre12 3
+    400102: Poutre12 4
+    400104: Poutre6
+    400106: Poutre6 1
+    400108: Poutre6 2
+    400110: Poutre6 3
+    400112: Poutre6 4
+    400114: Poutre6 5
+    400116: Poutre6 6
+    400118: Poutre6 7
+    400120: sol
+    400122: Tour
+    400124: Tour1
+    400126: Tour2
+    400128: Tour3
+    400130: Tour4
+    400132: Tour5
+    400134: tourelle
+    400136: Tout0
+    400138: //RootNode
+    2100000: Mur
+    2100002: Terre
+    2100004: lambert1
+    2100006: Metal_Noir
+    2100008: Poutre1
+    2300000: Chateau
+    2300002: Galerie
+    2300004: Mur1
+    2300006: Mur1 1
+    2300008: Mur1 2
+    2300010: Mur1 3
+    2300012: Mur1 4
+    2300014: Mur1 5
+    2300016: Mur1 6
+    2300018: Mur1 7
+    2300020: Mur1 8
+    2300022: pCylinder10
+    2300024: pCylinder11
+    2300026: pCylinder12
+    2300028: pCylinder13
+    2300030: pCylinder14
+    2300032: pCylinder15
+    2300034: pCylinder16
+    2300036: pCylinder17
+    2300038: pCylinder2
+    2300040: pCylinder4
+    2300042: pCylinder5
+    2300044: pCylinder6
+    2300046: pCylinder7
+    2300048: pCylinder8
+    2300050: pCylinder9
+    2300052: Poutre
+    2300054: Poutre 1
+    2300056: Poutre 2
+    2300058: Poutre 3
+    2300060: Poutre 4
+    2300062: Poutre 5
+    2300064: Poutre 6
+    2300066: Poutre 7
+    2300068: Poutre11
+    2300070: Poutre11 1
+    2300072: Poutre11 2
+    2300074: Poutre11 3
+    2300076: Poutre12
+    2300078: Poutre12 1
+    2300080: Poutre12 2
+    2300082: Poutre12 3
+    2300084: Poutre12 4
+    2300086: Poutre6
+    2300088: Poutre6 1
+    2300090: Poutre6 2
+    2300092: Poutre6 3
+    2300094: Poutre6 4
+    2300096: Poutre6 5
+    2300098: Poutre6 6
+    2300100: Poutre6 7
+    2300102: sol
+    2300104: Tour
+    2300106: Tour1
+    2300108: Tour2
+    2300110: Tour3
+    2300112: Tour4
+    2300114: Tour5
+    2300116: Tout0
+    3300000: Chateau
+    3300002: Galerie
+    3300004: Mur1
+    3300006: Mur1 1
+    3300008: Mur1 2
+    3300010: Mur1 3
+    3300012: Mur1 4
+    3300014: Mur1 5
+    3300016: Mur1 6
+    3300018: Mur1 7
+    3300020: Mur1 8
+    3300022: pCylinder10
+    3300024: pCylinder11
+    3300026: pCylinder12
+    3300028: pCylinder13
+    3300030: pCylinder14
+    3300032: pCylinder15
+    3300034: pCylinder16
+    3300036: pCylinder17
+    3300038: pCylinder2
+    3300040: pCylinder4
+    3300042: pCylinder5
+    3300044: pCylinder6
+    3300046: pCylinder7
+    3300048: pCylinder8
+    3300050: pCylinder9
+    3300052: Poutre
+    3300054: Poutre 1
+    3300056: Poutre 2
+    3300058: Poutre 3
+    3300060: Poutre 4
+    3300062: Poutre 5
+    3300064: Poutre 6
+    3300066: Poutre 7
+    3300068: Poutre11
+    3300070: Poutre11 1
+    3300072: Poutre11 2
+    3300074: Poutre11 3
+    3300076: Poutre12
+    3300078: Poutre12 1
+    3300080: Poutre12 2
+    3300082: Poutre12 3
+    3300084: Poutre12 4
+    3300086: Poutre6
+    3300088: Poutre6 1
+    3300090: Poutre6 2
+    3300092: Poutre6 3
+    3300094: Poutre6 4
+    3300096: Poutre6 5
+    3300098: Poutre6 6
+    3300100: Poutre6 7
+    3300102: sol
+    3300104: Tour
+    3300106: Tour1
+    3300108: Tour2
+    3300110: Tour3
+    3300112: Tour4
+    3300114: Tour5
+    3300116: Tout0
+    4300000: Galerie
+    4300002: sol
+    4300004: pCylinder2
+    4300006: pCylinder6
+    4300008: pCylinder5
+    4300010: pCylinder7
+    4300012: pCylinder4
+    4300014: pCylinder8
+    4300016: pCylinder9
+    4300018: pCylinder10
+    4300020: pCylinder11
+    4300022: pCylinder12
+    4300024: pCylinder13
+    4300026: pCylinder14
+    4300028: pCylinder15
+    4300030: pCylinder16
+    4300032: pCylinder17
+    4300034: Chateau
+    4300036: Tour5
+    4300038: Tour4
+    4300040: Tour3
+    4300042: Tour2
+    4300044: Tour1
+    4300046: Tour
+    4300048: Tout0
+    4300050: Mur1
+    4300052: Poutre
+    4300054: Poutre6
+    4300056: Mur1
+    4300058: Poutre
+    4300060: Poutre6
+    4300062: Mur1
+    4300064: Poutre12
+    4300066: Poutre11
+    4300068: Mur1
+    4300070: Poutre
+    4300072: Poutre6
+    4300074: Mur1
+    4300076: Poutre
+    4300078: Poutre6
+    4300080: Poutre12
+    4300082: Poutre11
+    4300084: Mur1
+    4300086: Poutre
+    4300088: Poutre6
+    4300090: Mur1
+    4300092: Poutre
+    4300094: Poutre6
+    4300096: Poutre12
+    4300098: Mur1
+    4300100: Poutre
+    4300102: Poutre6
+    4300104: Poutre12
+    4300106: Poutre11
+    4300108: Mur1
+    4300110: Poutre
+    4300112: Poutre6
+    4300114: Poutre12
+    4300116: Poutre11
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
