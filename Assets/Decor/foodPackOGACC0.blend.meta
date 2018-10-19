@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 30a283529c81f384aab886c62b01c39e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bread
+    100002: breadHalf
+    100004: breadHalf_001
+    100006: breadHalf_002
+    100008: breadHalf_003
+    100010: Circle
+    100012: Circle_001
+    100014: Circle_002
+    100016: Circle_003
+    100018: Circle_004
+    100020: //RootNode
+    100022: sausage
+    100024: sausage_001
+    100026: sausage_002
+    100028: sausage_003
+    400000: bread
+    400002: breadHalf
+    400004: breadHalf_001
+    400006: breadHalf_002
+    400008: breadHalf_003
+    400010: Circle
+    400012: Circle_001
+    400014: Circle_002
+    400016: Circle_003
+    400018: Circle_004
+    400020: //RootNode
+    400022: sausage
+    400024: sausage_001
+    400026: sausage_002
+    400028: sausage_003
+    2100000: cheese01__cheese
+    2100002: cheese01
+    2100004: sausage01__sausage01D
+    2100006: bread01__breadD
+    2300000: bread
+    2300002: breadHalf
+    2300004: breadHalf_001
+    2300006: breadHalf_002
+    2300008: breadHalf_003
+    2300010: Circle
+    2300012: Circle_001
+    2300014: Circle_002
+    2300016: Circle_003
+    2300018: Circle_004
+    2300020: sausage
+    2300022: sausage_001
+    2300024: sausage_002
+    2300026: sausage_003
+    3300000: bread
+    3300002: breadHalf
+    3300004: breadHalf_001
+    3300006: breadHalf_002
+    3300008: breadHalf_003
+    3300010: Circle
+    3300012: Circle_001
+    3300014: Circle_002
+    3300016: Circle_003
+    3300018: Circle_004
+    3300020: sausage
+    3300022: sausage_001
+    3300024: sausage_002
+    3300026: sausage_003
+    4300000: Circle_003
+    4300002: Circle_004
+    4300004: Circle_002
+    4300006: Circle_001
+    4300008: Circle
+    4300010: sausage_003
+    4300012: sausage_002
+    4300014: sausage_001
+    4300016: sausage
+    4300018: breadHalf_003
+    4300020: breadHalf_002
+    4300022: breadHalf_001
+    4300024: bread
+    4300026: breadHalf
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bread01__breadD
+    second: {fileID: 2100000, guid: 190d4d79838acd2428144ce790d1534c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cheese01
+    second: {fileID: 2100000, guid: f2e1075b577a40247b62cfd6585c2a82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cheese01__cheese
+    second: {fileID: 2100000, guid: f2e1075b577a40247b62cfd6585c2a82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sausage01__sausage01D
+    second: {fileID: 2100000, guid: 9e33732f78672704c87f63ae5464810d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
