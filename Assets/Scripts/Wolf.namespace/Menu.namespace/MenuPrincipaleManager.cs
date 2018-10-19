@@ -25,10 +25,10 @@ namespace Wolf.Menu
         }
         private void Update()
         {
-            if (Input.GetButtonDown(KeyCode.W) || Input.GetButtonDown(KeyCode.UpArrow) || Input.GetButtonDown(KeyCode.DownArrow)) {
+            //if (Input.GetButtonDown(KeyCode.W) || Input.GetButtonDown(KeyCode.UpArrow) || Input.GetButtonDown(KeyCode.DownArrow)) {
                 indexSelecteur += (int)Input.GetAxisRaw("Vertical");
                 selecteur.anchoredPosition += new Vector2(0, 118);
-            }
+            //}
         }
         public void CommencerJeu()
         {
