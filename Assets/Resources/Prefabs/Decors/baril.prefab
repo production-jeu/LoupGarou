@@ -9,18 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1380074045889744}
+  m_RootGameObject: {fileID: 1500740783279700}
   m_IsPrefabAsset: 1
---- !u!1 &1048564158416390
+--- !u!1 &1366821357724878
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4609989471511664}
-  - component: {fileID: 33530243620109536}
-  - component: {fileID: 23824988778055996}
+  - component: {fileID: 4364010068646796}
+  - component: {fileID: 33486549074596272}
+  - component: {fileID: 23045483902613062}
+  - component: {fileID: 136646290324179356}
   m_Layer: 0
   m_Name: wood_barrel_mini
   m_TagString: Untagged
@@ -28,14 +29,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1380074045889744
+--- !u!1 &1500740783279700
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4011328968240122}
+  - component: {fileID: 4070147348679150}
   m_Layer: 0
   m_Name: baril
   m_TagString: Untagged
@@ -43,39 +44,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4011328968240122
+--- !u!4 &4070147348679150
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1380074045889744}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.429343, y: 0.62, z: 7.220915}
-  m_LocalScale: {x: 0.64661, y: 0.64661, z: 0.64661}
+  m_GameObject: {fileID: 1500740783279700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.6247253, y: -1.6383793, z: 3.3269653}
+  m_LocalScale: {x: 0.16, y: 0.16, z: 0.16}
   m_Children:
-  - {fileID: 4609989471511664}
+  - {fileID: 4364010068646796}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4609989471511664
+--- !u!4 &4364010068646796
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1048564158416390}
+  m_GameObject: {fileID: 1366821357724878}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4011328968240122}
+  m_Father: {fileID: 4070147348679150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23824988778055996
+--- !u!23 &23045483902613062
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1048564158416390}
+  m_GameObject: {fileID: 1366821357724878}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -105,10 +106,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33530243620109536
+--- !u!33 &33486549074596272
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1048564158416390}
+  m_GameObject: {fileID: 1366821357724878}
   m_Mesh: {fileID: 4300000, guid: e5f74e5debe135f4987d72eff232bb1d, type: 3}
+--- !u!136 &136646290324179356
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1366821357724878}
+  m_Material: {fileID: 13400000, guid: f9b73d66c0fed8d4882cf66837fb721c, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 3.11945
+  m_Height: 7.9613905
+  m_Direction: 1
+  m_Center: {x: 0, y: 3.9922152, z: 0}

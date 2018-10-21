@@ -5,9 +5,9 @@ using UnityEngine.Events;
 using Wolf.Interaction;
 using Wolf.Events;
 
-namespace Wolf.Interaction
+namespace Wolf.JoueurNamespace
 {
-    public class InteractionJoueur : MonoBehaviour
+    public class DetectionInteraction : MonoBehaviour
     {
         public Camera cameraJoueur;
         public ZoneInteraction objetSelectionner;              // L'objet qui est sélectionné en ce moment. null = aucun objet

@@ -4,6 +4,7 @@ using UnityEngine;
 using William.MouseManager;
 using William.Utils;
 using Wolf.Interaction;
+using Wolf.JoueurNamespace;
 
 namespace Wolf
 {
@@ -33,7 +34,7 @@ namespace Wolf
         private Rigidbody joueurRg;                            // Référence au Rigidbody du joueur
 
         [Header("Interaction")]
-        public InteractionJoueur zoneInteraction;              // Référence au script d'interaction du joueur
+        public DetectionInteraction detectionInteraction;      // Référence au script d'interaction du joueur
         public ZoneInteraction objetSelectionner;              // L'objet qui est sélectionné en ce moment. null = aucun objet
 
         /**
@@ -52,10 +53,15 @@ namespace Wolf
 
         private void Start()
         {
-            zoneInteraction.cameraJoueur = cameraJoueur;
+            detectionInteraction.cameraJoueur = cameraJoueur;
             // Quand un objet est sélectionné avec le sélecteur, le joueur reçoit une référence de cet objet
-            zoneInteraction.OnSelectionChange.AddListener((t_objSelectionner) => {
-                if (t_objSelectionner != null)
+            detectionInteraction.OnSelectionChange.AddListener((t_objSelectionner) => {
+
+                objetSelectionner = t_objSelectionner;
+                GameManager.inst.uiManager.UpdateSelection(objetSelectionner);
+
+                /*
+                 if (t_objSelectionner != null)
                 {
                     if (t_objSelectionner.peutEtreUtiliser)
                     {
@@ -67,6 +73,8 @@ namespace Wolf
                 {
                     GameManager.inst.uiManager.UpdateSelection(t_objSelectionner);
                 }
+                 */
+
             });
         }
 
@@ -121,9 +129,12 @@ namespace Wolf
                 // Interaction avec objet sélectionné
                 if (objetSelectionner != null)
                 {
-                    objetSelectionner.Interagir();
-                    objetSelectionner = null;
-                    zoneInteraction.objetSelectionner = null;
+                    if (objetSelectionner.peutEtreUtiliser)
+                    {
+                        objetSelectionner.Interagir();
+                        objetSelectionner = null;
+                        detectionInteraction.objetSelectionner = null;
+                    }
                 }
             }
 

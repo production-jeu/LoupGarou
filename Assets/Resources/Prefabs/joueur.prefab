@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 20049352923609168}
   - component: {fileID: 124749805097627198}
   - component: {fileID: 81225264278359316}
-  - component: {fileID: 114121271940085262}
   m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
@@ -94,6 +93,7 @@ GameObject:
   - component: {fileID: 23019105567617748}
   - component: {fileID: 54471652439352640}
   - component: {fileID: 114789410165453186}
+  - component: {fileID: 114749561425795294}
   m_Layer: 9
   m_Name: joueur
   m_TagString: joueur
@@ -142,14 +142,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634627029857486}
-  m_LocalRotation: {x: -0.000000026062445, y: 0.70337886, z: 0.000000022241139, w: -0.71081525}
-  m_LocalPosition: {x: -163.81, y: 1.1, z: -15.83}
+  m_LocalRotation: {x: 0.000000032048867, y: -0.3084733, z: 0.000000012115813, w: -0.951233}
+  m_LocalPosition: {x: -388.9, y: 4.2, z: 224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4488198302481442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -89.397, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 35.934002, z: 0}
 --- !u!4 &4167922069480668
 Transform:
   m_ObjectHideFlags: 1
@@ -169,14 +169,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560767937003438}
-  m_LocalRotation: {x: 0.01784815, y: -1.2256862e-12, z: 2.224283e-10, w: 0.99984074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.4800002, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4767933064779394}
   m_Father: {fileID: 4488198302481442}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.045, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4488198302481442
 Transform:
   m_ObjectHideFlags: 1
@@ -517,18 +517,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114121271940085262
+--- !u!114 &114749561425795294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1560767937003438}
+  m_GameObject: {fileID: 1634627029857486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f145c63339e3284f9c118bf088af56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 257661da9351e254cb2168236c45feed, type: 2}
 --- !u!114 &114789410165453186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -542,12 +541,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesseMarche: 4
   vitesseCourse: 7
-  sensibiliterSouris: 1
+  sensibiliterSouris: 2
   controlesPossibles: 1
   bloquerSouris: 1
   animBras: {fileID: 95013393879623638}
   cameraJoueur: {fileID: 20049352923609168}
-  zoneInteraction: {fileID: 114898661285410092}
+  detectionInteraction: {fileID: 114898661285410092}
   objetSelectionner: {fileID: 0}
 --- !u!114 &114898661285410092
 MonoBehaviour:
@@ -577,10 +576,10 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634627029857486}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f9b73d66c0fed8d4882cf66837fb721c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.31049156
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.012172192, y: 6.620033e-17, z: 5.3645383e-11}
