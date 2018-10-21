@@ -31,6 +31,7 @@ namespace Wolf
         public Camera cameraJoueur;                            // Référence à la Camera du joueur
         private Transform cameraTransform;                     // Pour changer la position de la caméra ( la tête du joueur )
         private bool enCourse = false;                         // Détermine si le joueur est en train de courir
+        public bool enEscalier = false;                       // Détermine si le joueur est dans une escalier
         private Rigidbody joueurRg;                            // Référence au Rigidbody du joueur
 
         [Header("Interaction")]
@@ -161,6 +162,7 @@ namespace Wolf
             Vector3 mouvementAvant;
 
             float vitesse = (enCourse) ? vitesseCourse : vitesseMarche;
+            vitesse = (enEscalier) ? vitesseMarche/1.5f : vitesse;
             bool deuxDirectionEnMemeTemps = (Mathf.Abs(horiz) == 1 && Mathf.Abs(vert) == 1) ? true : false;
 
             if (Mathf.Abs(horiz) > 0 || Mathf.Abs(vert) > 0)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Wolf.Events;
 
 namespace Wolf.JoueurNamespace
 {
@@ -11,6 +12,13 @@ namespace Wolf.JoueurNamespace
      */
     public class DetectionEscaliers : MonoBehaviour
     {
+        Joueur joueur;                      // Référence du joueur
+        CapsuleCollider capsuleCollider;    // CapsuleCollider du joueur
+        private void Awake()
+        {
+            joueur = GetComponent<Joueur>();
+            capsuleCollider = GetComponent<CapsuleCollider>();
+        }
         /**
          * Envoie des Raycasts pour ensuite placer cet objet dessus l'escalier si celui-ci est trouvé
          * @param void
@@ -18,6 +26,7 @@ namespace Wolf.JoueurNamespace
          */
         void Update()
         {
+            bool estDansEscalier = false;
             RaycastHit[] hits;                                           // Les RaycastHit du raycast
             Ray downRay = new Ray(transform.position, transform.up);     // Le Ray en dessous de l'objet
             Ray upRay = new Ray(transform.position, transform.up * -1);  // Le Ray au dessus de l'objet
@@ -30,12 +39,14 @@ namespace Wolf.JoueurNamespace
                 if (hit.collider.tag == "escaliers")
                 {
                     positionCible = hit.collider.transform.position.y;
-                    transform.position = new Vector3(transform.position.x, hit.point.y + GetComponent<CapsuleCollider>().bounds.size.y - 0.4f, transform.position.z);
+                    transform.position = new Vector3(transform.position.x, hit.point.y + capsuleCollider.bounds.size.y - 0.4f, transform.position.z);
+                    estDansEscalier = true;
                     break;
                 }
                 else
                 {
                     positionCible = transform.position.y;
+                    estDansEscalier = false;
                 }
             }
             hits = Physics.RaycastAll(upRay, 10f);
@@ -45,13 +56,19 @@ namespace Wolf.JoueurNamespace
                 if (hit.collider.tag == "escaliers")
                 {
                     positionCible = hit.collider.transform.position.y;
-                    transform.position = new Vector3(transform.position.x, hit.point.y + GetComponent<CapsuleCollider>().bounds.size.y - 0.4f, transform.position.z);
+                    transform.position = new Vector3(transform.position.x, hit.point.y + capsuleCollider.bounds.size.y - 0.4f, transform.position.z);
+                    estDansEscalier = true;
                     break;
                 }
                 else
                 {
                     positionCible = transform.position.y;
+                    estDansEscalier = false;
                 }
+            }
+            if (joueur.enEscalier != estDansEscalier)
+            {
+                joueur.enEscalier = estDansEscalier;
             }
         }// Fin Update
     }
