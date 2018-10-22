@@ -12,7 +12,7 @@ namespace Wolf
     /**
       * Classe Joueur qui s'occupe de tout la logique relative au joueur
       * @author William Gingras
-      * @version 2018-09-03
+      * @version 2018-10-22
       */
     public class Joueur : MonoBehaviour
     {

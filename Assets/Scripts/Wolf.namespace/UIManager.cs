@@ -8,14 +8,20 @@ using Wolf.Interaction.Ramassable;
 
 namespace Wolf
 {
+    /*
+     * Manager de l'interface utilisateur
+     * @version 2028-10-22
+     * @author William Gingras
+     */
     public class UIManager : MonoBehaviour
     {
-        public Image image_fondNoir;
-        public TextMeshProUGUI texte_interaction;
+        public Image image_fondNoir;                   // Le fond noir
+        public TextMeshProUGUI texte_interaction;      // Le texte au milieu de l'écran
         public void Initialisation()
         {
             texte_interaction.gameObject.SetActive(false);
         }
+        // Rafraichit le texte de sélection qui apparait au milieu de l'écran (Si le paramètre est NULL, alors le texte disparait)
         public void UpdateSelection(ZoneInteraction objetSelectionner)
         {
             if (objetSelectionner != null)
@@ -48,6 +54,7 @@ namespace Wolf
                 texte_interaction.text = "";
             }
         }
+        // Animation Lorsque le joueur dort
         public void Dormir()
         {
             image_fondNoir.gameObject.SetActive(true);

@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace Wolf
 {
+    /*
+     * Manager du temps
+     * @version 2028-10-22
+     * @author William Gingras
+     */
     public class TimeManager : MonoBehaviour
     {
         #region Singleton

@@ -4,6 +4,11 @@ using UnityEngine;
 
 namespace Wolf
 {
+    /*
+     * Texte avec un ID 
+     * @version 2028-10-22
+     * @author William Gingras
+     */
     [SerializeField]
     [System.Serializable]
     public class Texte
@@ -16,6 +21,11 @@ namespace Wolf
             this.valeur = valeur;
         }
     }
+    /*
+     * Manager des textes
+     * @version 2028-10-22
+     * @author William Gingras
+     */
     public class TextManager : MonoBehaviour
     {
         /*
@@ -27,15 +37,15 @@ namespace Wolf
         }
         #endregion
         */
-        public List<Texte> listeDialogues;
+        public List<Texte> listeTextes;
         public void Initialisation()
         {
-            listeDialogues = new List<Texte>();
+            listeTextes = new List<Texte>();
             // AJOUT DE TEXTES ICI
 
-            AjouterTexte("FEMME_CONTENTE_01", "Je suis contente!");
-            AjouterTexte("FEMME_CONTENTE_02", "Je suis heureuse!");
-            AjouterTexte("FEMME_CONTENTE_03", "Bonjour! Comment allez-vous?");
+            // AjouterTexte("FEMME_CONTENTE_01", "Je suis contente!");
+            // AjouterTexte("FEMME_CONTENTE_02", "Je suis heureuse!");
+            // AjouterTexte("FEMME_CONTENTE_03", "Bonjour! Comment allez-vous?");
 
             #region COLLECTIBLES
 
@@ -60,7 +70,10 @@ namespace Wolf
                                                 + "lumière albatrine sur les murs de Winterrest.\n"
                                                 + "Ici, le passé règne, squelettique, fragile, vide.\n"
                                                 + "Le potentiel parfait d’une tombe.”");
-            AjouterTexte("COLLECTIBLE_EXPLORATEUR_02_TITRE", "Ils étaient loups");
+
+            // FAUTES DE FRANCAIS
+
+            /*AjouterTexte("COLLECTIBLE_EXPLORATEUR_02_TITRE", "Ils étaient loups");
             AjouterTexte("COLLECTIBLE_EXPLORATEUR_02_CONTENU", "(Schwangau - Allemagne - 21 Novembre 2014)\n"
                                                 + "\n"
                                                 + "“Les loups rôdent autour des ruines comme les hommes autour des bars,\n"
@@ -92,23 +105,21 @@ namespace Wolf
                                                 + "\n"
                                                 + "Ces forêts d’Autriche et d’Allemagne\n"
                                                 + "cachent des châteaux, des rêves et tant des guerres, tous couteux.\n"
-                                                + "Seul mon téléphone et sa lumière brûle le givre.”\n");
+                                                + "Seul mon téléphone et sa lumière brûle le givre.”\n");*/
             
             #endregion
 
             #endregion
-
-            // FIN AJOUT TEXTES
-            //foreach (Texte t in listeDialogues)
-            //    Debug.Log(t.id);
         }
+        // Retourne la valeur du texte avec l'ID donné
         public string GetTexteById(string id)
         {
-            return listeDialogues.Find(x => x.id == id).valeur;
+            return listeTextes.Find(x => x.id == id).valeur;
         }
+        // Ajoute un texte dans la liste de textes
         public void AjouterTexte(string id, string valeur)
         {
-            listeDialogues.Add(new Texte(id, valeur));
+            listeTextes.Add(new Texte(id, valeur));
         }
     }
 }
