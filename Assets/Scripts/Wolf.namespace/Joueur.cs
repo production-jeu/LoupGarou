@@ -162,7 +162,7 @@ namespace Wolf
             Vector3 mouvementAvant;
 
             float vitesse = (enCourse) ? vitesseCourse : vitesseMarche;
-            vitesse = (enEscalier) ? vitesseMarche/1.5f : vitesse;
+            // vitesse = (enEscalier) ? vitesseMarche/1.5f : vitesse;    // Divise la vitesse si dans l'escalier
             bool deuxDirectionEnMemeTemps = (Mathf.Abs(horiz) == 1 && Mathf.Abs(vert) == 1) ? true : false;
 
             if (Mathf.Abs(horiz) > 0 || Mathf.Abs(vert) > 0)
