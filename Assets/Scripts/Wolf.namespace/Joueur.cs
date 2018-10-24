@@ -48,8 +48,9 @@ namespace Wolf
             instance = this;
             joueurRg = GetComponent<Rigidbody>();
             cameraTransform = transform.Find("CameraParent").transform.Find("Camera");
-            MouseManager.SetMouse(true);
-            bloquerSouris = true;
+            //MouseManager.SetMouse(true);
+            bloquerSouris = false;
+            print("HOLLY SHIT I AM AWAKE");
         }
 
         private void Start()
@@ -162,7 +163,7 @@ namespace Wolf
             Vector3 mouvementAvant;
 
             float vitesse = (enCourse) ? vitesseCourse : vitesseMarche;
-            // vitesse = (enEscalier) ? vitesseMarche/1.5f : vitesse;    // Divise la vitesse si dans l'escalier
+            vitesse = (enEscalier) ? vitesseMarche*0.85f : vitesse;    // Divise la vitesse si dans l'escalier
             bool deuxDirectionEnMemeTemps = (Mathf.Abs(horiz) == 1 && Mathf.Abs(vert) == 1) ? true : false;
 
             if (Mathf.Abs(horiz) > 0 || Mathf.Abs(vert) > 0)
