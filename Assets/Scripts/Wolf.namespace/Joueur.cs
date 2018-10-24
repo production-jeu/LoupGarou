@@ -168,24 +168,17 @@ namespace Wolf
             if (Mathf.Abs(horiz) > 0 || Mathf.Abs(vert) > 0)
                 if (vitesse == vitesseMarche)
                 {
-
                     animBras.SetBool("marche", true);
                     animBras.SetBool("course", false);
-
                 }
                 else
                 {
-
                     animBras.SetBool("marche", false);
                     animBras.SetBool("course", true);
-
                 }
             else
             {
-
-                animBras.SetBool("marche", false);
-                animBras.SetBool("course", false);
-
+                FaireAnimationIdle();
             }
             mouvementDeCoter = transform.right * horiz * vitesse / ((deuxDirectionEnMemeTemps) ? 1.5f : 1);
             mouvementAvant = transform.forward * vert * vitesse / ((deuxDirectionEnMemeTemps) ? 1.5f : 1);
@@ -221,6 +214,22 @@ namespace Wolf
 
             //Rotation du corps du joueur
             transform.rotation = Quaternion.Euler(rotationCorps);
+        }
+
+        // Force simplement le joueur à faire son animation de 'idle'
+        public void FaireAnimationIdle()
+        {
+            animBras.SetBool("marche", false);
+            animBras.SetBool("course", false);
+        }
+        // Permet de rendre le joueur visible ou invisible
+        public void SetJoueurVisible(bool visible)
+        {
+            GetComponent<MeshRenderer>().enabled = visible;
+            foreach (MeshRenderer brasMesh in animBras.GetComponentsInChildren<MeshRenderer>())
+            {
+                brasMesh.enabled = visible;
+            }
         }
 
         private void ToogleCourse()

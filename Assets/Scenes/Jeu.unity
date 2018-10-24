@@ -1413,6 +1413,34 @@ CapsuleCollider:
   m_Height: 25.771534
   m_Direction: 1
   m_Center: {x: 0, y: -6.61, z: -0.000030517578}
+--- !u!1 &312631602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 312631603}
+  m_Layer: 0
+  m_Name: POINT_TEST_CAMERA_JOUEUR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &312631603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312631602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -413.95, y: 4.547, z: 224.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &335604878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4244396358251392, guid: fc2a79731c291f84fb214df08c6a75fe,
@@ -2168,6 +2196,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4244396358251392, guid: fc2a79731c291f84fb214df08c6a75fe,
     type: 2}
   m_PrefabInternal: {fileID: 2017543419}
+--- !u!1 &546353986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546353987}
+  m_Layer: 9
+  m_Name: pointDevantJoueur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &546353987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546353986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.48, z: 0.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 695092697}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557593342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,9 +2603,43 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 136661460384129274, guid: d928d1553c21d2a41b5cb0ba336443dc,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23019105567617748, guid: d928d1553c21d2a41b5cb0ba336443dc,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920717479628908, guid: d928d1553c21d2a41b5cb0ba336443dc, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d928d1553c21d2a41b5cb0ba336443dc, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &587866309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1560767937003438, guid: d928d1553c21d2a41b5cb0ba336443dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 587866308}
+--- !u!114 &587866310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587866309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c46372414e78e4abbc16cf25c326bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posInitiale: {x: 0, y: 0, z: 0}
+  pointTest: {fileID: 312631603}
+  pointTestRegard: {fileID: 1024213160}
+  pointTestRegard2: {fileID: 546353987}
 --- !u!1001 &598567427
 Prefab:
   m_ObjectHideFlags: 0
@@ -2809,6 +2899,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a44eacc1074fb0042930af200a614627,
     type: 3}
   m_PrefabInternal: {fileID: 664380678}
+--- !u!4 &695092697 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4488198302481442, guid: d928d1553c21d2a41b5cb0ba336443dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 587866308}
 --- !u!4 &700360922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4244396358251392, guid: fc2a79731c291f84fb214df08c6a75fe,
@@ -9141,6 +9236,34 @@ CapsuleCollider:
   m_Height: 8.910879
   m_Direction: 1
   m_Center: {x: 0, y: -2.089528, z: -0.0000009536743}
+--- !u!1 &1024213159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024213160}
+  m_Layer: 0
+  m_Name: POINT_TEST_LOOKAT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1024213160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024213159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -413.95, y: 4.547, z: 233.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1035142988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4244396358251392, guid: fc2a79731c291f84fb214df08c6a75fe,

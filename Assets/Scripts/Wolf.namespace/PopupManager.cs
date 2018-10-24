@@ -19,6 +19,7 @@ namespace Wolf
         [Space(10)]
         public Popup popupActuel = null;         // Le popup qui est actuellement affiché
         public List<Action> listePopups;         // Listes des popups dans l'ordre qu'il faut les afficher
+        private GameManager gameManager;         // Ref GameManager
 
         public PopupTest _PopupTest;             // Ref au popupTest
         public PopupParchemin _PopupParchemin;   // Ref au popupParchemin
@@ -34,6 +35,7 @@ namespace Wolf
         // initialisation de ce script (appelé par le GameManager)
         public void Initialisation()
         {
+            gameManager = GameManager.inst;
             listePopups = new List<Action>();
             if (debug)
             {
@@ -46,7 +48,7 @@ namespace Wolf
         {
             popupActuel = popup;
             popup.AfficherPopup();
-            GameManager.inst.joueur.controlesPossibles = false;
+            gameManager.joueur.controlesPossibles = false;
             MouseManager.SetMouse(false);
         }
         // Ajoute une demande à la liste listePopups
@@ -77,7 +79,7 @@ namespace Wolf
         {
             popupActuel.FermerPopup();
             popupActuel = null;
-            GameManager.inst.joueur.controlesPossibles = true;
+            gameManager.joueur.controlesPossibles = true;
             MouseManager.SetMouse(true);
             if (afficherProchainPopup)
                 AfficherProchainPopup();
