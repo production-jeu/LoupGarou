@@ -48,9 +48,6 @@ namespace Wolf
             instance = this;
             joueurRg = GetComponent<Rigidbody>();
             cameraTransform = transform.Find("CameraParent").transform.Find("Camera");
-            //MouseManager.SetMouse(true);
-            bloquerSouris = false;
-            print("HOLLY SHIT I AM AWAKE");
         }
 
         private void Start()
@@ -85,8 +82,10 @@ namespace Wolf
          * @param void
          * @return void
         **/
-        public void Initialize()
+        public void Initialisation()
         {
+            MouseManager.SetMouse(true);
+            bloquerSouris = true;
         }
 
         /**

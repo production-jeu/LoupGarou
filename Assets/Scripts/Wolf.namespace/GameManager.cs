@@ -42,6 +42,7 @@ namespace Wolf
             timeManager.Initialisation();
             popupManager.Initialisation();
             textManager.Initialisation();
+            joueur.Initialisation();
             // Fade onStart
             //uiManager.image_fondNoir.gameObject.SetActive(true);
             //uiManager.image_fondNoir.GetComponent<Animator>().Play("anim_nouveauJour", -1, 0);
