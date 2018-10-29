@@ -12,7 +12,7 @@ namespace Wolf
     /**
       * Classe Joueur qui s'occupe de tout la logique relative au joueur
       * @author William Gingras
-      * @version 2018-09-03
+      * @version 2018-10-22
       */
     public class Joueur : MonoBehaviour
     {
@@ -48,8 +48,6 @@ namespace Wolf
             instance = this;
             joueurRg = GetComponent<Rigidbody>();
             cameraTransform = transform.Find("CameraParent").transform.Find("Camera");
-            MouseManager.SetMouse(true);
-            bloquerSouris = true;
         }
 
         private void Start()
@@ -84,8 +82,10 @@ namespace Wolf
          * @param void
          * @return void
         **/
-        public void Initialize()
+        public void Initialisation()
         {
+            MouseManager.SetMouse(true);
+            bloquerSouris = true;
         }
 
         /**
@@ -162,30 +162,23 @@ namespace Wolf
             Vector3 mouvementAvant;
 
             float vitesse = (enCourse) ? vitesseCourse : vitesseMarche;
-            // vitesse = (enEscalier) ? vitesseMarche/1.5f : vitesse;    // Divise la vitesse si dans l'escalier
+            vitesse = (enEscalier) ? vitesseMarche*0.85f : vitesse;    // Divise la vitesse si dans l'escalier
             bool deuxDirectionEnMemeTemps = (Mathf.Abs(horiz) == 1 && Mathf.Abs(vert) == 1) ? true : false;
 
             if (Mathf.Abs(horiz) > 0 || Mathf.Abs(vert) > 0)
                 if (vitesse == vitesseMarche)
                 {
-
                     animBras.SetBool("marche", true);
                     animBras.SetBool("course", false);
-
                 }
                 else
                 {
-
                     animBras.SetBool("marche", false);
                     animBras.SetBool("course", true);
-
                 }
             else
             {
-
-                animBras.SetBool("marche", false);
-                animBras.SetBool("course", false);
-
+                FaireAnimationIdle();
             }
             mouvementDeCoter = transform.right * horiz * vitesse / ((deuxDirectionEnMemeTemps) ? 1.5f : 1);
             mouvementAvant = transform.forward * vert * vitesse / ((deuxDirectionEnMemeTemps) ? 1.5f : 1);
@@ -221,6 +214,22 @@ namespace Wolf
 
             //Rotation du corps du joueur
             transform.rotation = Quaternion.Euler(rotationCorps);
+        }
+
+        // Force simplement le joueur à faire son animation de 'idle'
+        public void FaireAnimationIdle()
+        {
+            animBras.SetBool("marche", false);
+            animBras.SetBool("course", false);
+        }
+        // Permet de rendre le joueur visible ou invisible
+        public void SetJoueurVisible(bool visible)
+        {
+            GetComponent<MeshRenderer>().enabled = visible;
+            foreach (MeshRenderer brasMesh in animBras.GetComponentsInChildren<MeshRenderer>())
+            {
+                brasMesh.enabled = visible;
+            }
         }
 
         private void ToogleCourse()

@@ -142,14 +142,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634627029857486}
-  m_LocalRotation: {x: 0.000000032048867, y: -0.3084733, z: 0.000000012115813, w: -0.951233}
-  m_LocalPosition: {x: -388.9, y: 4.2, z: 224}
+  m_LocalRotation: {x: 0.00000001468193, y: 0.9229972, z: -0.000000030957448, w: -0.38480684}
+  m_LocalPosition: {x: -418.938, y: 4.2, z: 229.258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4488198302481442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 35.934002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -134.73601, z: 0}
 --- !u!4 &4167922069480668
 Transform:
   m_ObjectHideFlags: 1
@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1560767937003438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4800002, z: -0}
+  m_LocalPosition: {x: 0, y: 0.48, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4767933064779394}
@@ -546,6 +546,7 @@ MonoBehaviour:
   bloquerSouris: 1
   animBras: {fileID: 95013393879623638}
   cameraJoueur: {fileID: 20049352923609168}
+  enEscalier: 0
   detectionInteraction: {fileID: 114898661285410092}
   objetSelectionner: {fileID: 0}
 --- !u!114 &114898661285410092
@@ -576,7 +577,7 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634627029857486}
-  m_Material: {fileID: 13400000, guid: f9b73d66c0fed8d4882cf66837fb721c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.31049156

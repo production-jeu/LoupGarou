@@ -6,6 +6,11 @@ using Wolf.Batiments;
 
 namespace Wolf
 {
+    /*
+     * Manager du village
+     * @version 2028-10-22
+     * @author William Gingras
+     */
     public class VillageManager : MonoBehaviour
     {
 

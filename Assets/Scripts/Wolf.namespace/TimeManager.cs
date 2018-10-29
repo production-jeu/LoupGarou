@@ -4,10 +4,18 @@ using UnityEngine;
 
 namespace Wolf
 {
+<<<<<<< HEAD
     //Fonction utilisable
         //Toggle_Temps (Change le state du temps)
 
 
+=======
+    /*
+     * Manager du temps
+     * @version 2028-10-22
+     * @author William Gingras
+     */
+>>>>>>> 937e947c9bb7e2ae257ef9f1a2d1747ae070fb8e
     public class TimeManager : MonoBehaviour
     {
         #region Singleton
