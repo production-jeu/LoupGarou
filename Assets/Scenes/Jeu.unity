@@ -8231,7 +8231,7 @@ MonoBehaviour:
   textManager: {fileID: 963845473}
   timeManager: {fileID: 963845471}
   popupManager: {fileID: 981840131}
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 963845476}
   uiManager: {fileID: 2101124528}
 --- !u!4 &963845470
 Transform:
@@ -8261,6 +8261,8 @@ MonoBehaviour:
   lune: {fileID: 0}
   skyJour: {fileID: 2100000, guid: 75f0b1e78b32f2244b76fe4bbaf87fb7, type: 2}
   skyNight: {fileID: 2100000, guid: d07d2172e76d3fa429e80a14d2ae3616, type: 2}
+  Timescale: 45
+  Temps_Fige: 0
 --- !u!114 &963845472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8283,7 +8285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f486e45414b69449a75f9151b36981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listeDialogues: []
+  listeTextes: []
 --- !u!82 &963845474
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8390,7 +8392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f486e45414b69449a75f9151b36981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listeDialogues: []
+  listeTextes: []
 --- !u!114 &963845476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8402,6 +8404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294fdedf40e4edb49a4ac69d195a34c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  enDialogue: 0
 --- !u!82 &963845477
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8622,6 +8626,7 @@ MonoBehaviour:
   popupActuel: {fileID: 0}
   _PopupTest: {fileID: 1180796773}
   _PopupParchemin: {fileID: 0}
+  _PopupDialogue: {fileID: 0}
 --- !u!114 &981840132
 MonoBehaviour:
   m_ObjectHideFlags: 0
