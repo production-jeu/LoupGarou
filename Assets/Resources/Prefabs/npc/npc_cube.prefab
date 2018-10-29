@@ -238,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4249177835442802}
   - component: {fileID: 65589593344938088}
-  - component: {fileID: 114464203651966038}
+  - component: {fileID: 114445264589192716}
   m_Layer: 0
   m_Name: zone_interaction
   m_TagString: interactif
@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407419051405944}
   m_LocalRotation: {x: -0, y: -0.9933349, z: -0, w: 0.11526448}
-  m_LocalPosition: {x: -380.225, y: 4.382, z: 109.213}
+  m_LocalPosition: {x: -406.41, y: 4.601, z: 225.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4901633436998548}
@@ -952,7 +952,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114464203651966038
+--- !u!114 &114445264589192716
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905523250753638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77ce02b1eee98044c895af0b05db5ada, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ad13a305fa0c0648af579cae76519c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   peutEtreUtiliser: 1

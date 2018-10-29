@@ -37,6 +37,7 @@ namespace Wolf
         [Header("Interaction")]
         public DetectionInteraction detectionInteraction;      // Référence au script d'interaction du joueur
         public ZoneInteraction objetSelectionner;              // L'objet qui est sélectionné en ce moment. null = aucun objet
+        public ZoneInteraction ancienObjetSelectionner = null; // L'objet qui était sélectionné
 
         /**
          * Initialisation des valeurs
@@ -54,11 +55,21 @@ namespace Wolf
         {
             detectionInteraction.cameraJoueur = cameraJoueur;
             // Quand un objet est sélectionné avec le sélecteur, le joueur reçoit une référence de cet objet
-            detectionInteraction.OnSelectionChange.AddListener((t_objSelectionner) => {
+            detectionInteraction.OnSelectionChange.AddListener((t_objSelectionner) => 
+            {
 
                 objetSelectionner = t_objSelectionner;
+                ancienObjetSelectionner = objetSelectionner;
                 GameManager.inst.uiManager.UpdateSelection(objetSelectionner);
 
+                if (objetSelectionner == ancienObjetSelectionner && ancienObjetSelectionner != null)
+                {
+
+                }
+                else
+                {
+
+                }
                 /*
                  if (t_objSelectionner != null)
                 {
