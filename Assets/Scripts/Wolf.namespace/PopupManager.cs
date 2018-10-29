@@ -23,13 +23,17 @@ namespace Wolf
 
         public PopupTest _PopupTest;             // Ref au popupTest
         public PopupParchemin _PopupParchemin;   // Ref au popupParchemin
+        public PopupDialogue _PopupDialogue;     // Ref au popupTest
+
+        public Dialogue dialogue_test;
+
         private void Update()
         {
             // Permet de fermer le popup avec certaine touche si un popup est affiché
             if(popupActuel != null)
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButton(0))
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape))
                 {
-                    FermerPopupActuel();
+                    ChoixDialogue(-1);
                 }
         }
         // initialisation de ce script (appelé par le GameManager)
@@ -42,6 +46,11 @@ namespace Wolf
                 AjouterDemandePopup(_PopupTest);
                 AjouterDemandePopup(_PopupParchemin);
             }
+        }
+        // -1 = aucun choix, 0 = choix1, 1 = choix2
+        public void ChoixDialogue(int choix)
+        {
+            FermerPopupActuel(choix);
         }
         // Affiche un popup cible
         public void AfficherPopup(Popup popup)
@@ -66,18 +75,19 @@ namespace Wolf
                 AfficherProchainPopup();
         }
         // Affiche le prochain popup de listePopups
-        public void AfficherProchainPopup()
+        public Popup AfficherProchainPopup()
         {
             if (listePopups.Count > 0)
             {
                 listePopups[0]();
                 listePopups.RemoveAt(0);
             }
+            return popupActuel;
         }
         // Ferme le popup actuellement ouvert
-        public void FermerPopupActuel(bool afficherProchainPopup = true)
+        public void FermerPopupActuel(int choix, bool afficherProchainPopup = true)
         {
-            popupActuel.FermerPopup();
+            popupActuel.FermerPopup(choix);
             popupActuel = null;
             gameManager.joueur.controlesPossibles = true;
             MouseManager.SetMouse(true);
