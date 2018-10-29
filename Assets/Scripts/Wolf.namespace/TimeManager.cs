@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using Wolf.Events;
 
 namespace Wolf
 {
@@ -30,6 +32,7 @@ namespace Wolf
         public void Initialisation()
         {
             //SetTime(TimeState.NIGHT);
+            SetTime(TimeState.MORNING);
         }
 
         public void SetTime(TimeState timeState)
