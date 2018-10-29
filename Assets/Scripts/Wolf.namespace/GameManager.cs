@@ -43,8 +43,7 @@ namespace Wolf
             popupManager.Initialisation();
             textManager.Initialisation();
             // Fade onStart
-            uiManager.image_fondNoir.gameObject.SetActive(true);
-            uiManager.image_fondNoir.GetComponent<Animator>().Play("anim_nouveauJour", -1, 0);
+            // uiManager.image_fondNoir.gameObject.SetActive(true); uiManager.image_fondNoir.GetComponent<Animator>().Play("anim_nouveauJour", -1, 0);
         }
 
         public void RamasserObjet(TypeObjet typeObjet)
