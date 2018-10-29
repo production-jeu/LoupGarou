@@ -42,7 +42,7 @@ namespace Wolf.JoueurNamespace
                 }
             }
         }
-        #region OBSOLETE
+        /*#region OBSOLETE
         [System.Obsolete]
         private bool canInteractWithCollider = false;
         [System.Obsolete]
@@ -80,7 +80,7 @@ namespace Wolf.JoueurNamespace
                     OnSelectionChange.Invoke(objetSelectionner);
                 }
         }
-        #endregion
+        #endregion*/
     }
 }
 
