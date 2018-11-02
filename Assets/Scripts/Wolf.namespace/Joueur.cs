@@ -37,7 +37,6 @@ namespace Wolf
         [Header("Interaction")]
         public DetectionInteraction detectionInteraction;      // Référence au script d'interaction du joueur
         public ZoneInteraction objetSelectionner;              // L'objet qui est sélectionné en ce moment. null = aucun objet
-        public ZoneInteraction ancienObjetSelectionner = null; // L'objet qui était sélectionné
 
         /**
          * Initialisation des valeurs
@@ -59,17 +58,7 @@ namespace Wolf
             {
 
                 objetSelectionner = t_objSelectionner;
-                ancienObjetSelectionner = objetSelectionner;
                 GameManager.inst.uiManager.UpdateSelection(objetSelectionner);
-
-                if (objetSelectionner == ancienObjetSelectionner && ancienObjetSelectionner != null)
-                {
-
-                }
-                else
-                {
-
-                }
                 /*
                  if (t_objSelectionner != null)
                 {

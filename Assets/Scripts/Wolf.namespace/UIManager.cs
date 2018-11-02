@@ -17,6 +17,7 @@ namespace Wolf
     {
         public Image image_fondNoir;                   // Le fond noir
         public TextMeshProUGUI texte_interaction;      // Le texte au milieu de l'écran
+        public bool selectionVisible = true;           // Détermine si la sélection est visible
         public void Initialisation()
         {
             texte_interaction.gameObject.SetActive(false);
@@ -24,7 +25,7 @@ namespace Wolf
         // Rafraichit le texte de sélection qui apparait au milieu de l'écran (Si le paramètre est NULL, alors le texte disparait)
         public void UpdateSelection(ZoneInteraction objetSelectionner)
         {
-            if (objetSelectionner != null)
+            if (objetSelectionner != null && selectionVisible)
             {
                 texte_interaction.gameObject.SetActive(true);
                 if (objetSelectionner.GetType() == typeof(InteractionPorte))

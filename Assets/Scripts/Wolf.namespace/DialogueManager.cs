@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Wolf
 {
@@ -18,12 +19,12 @@ namespace Wolf
         {
             gameManager = GameManager.inst;
         }
-        public void GererDialogue(Dialogue dialogue, System.Action fonctionFinDialogue = null)
+        public void GererDialogue(Dialogue dialogue, UnityAction fonctionFinDialogue = null)
         {
             enDialogue = true;
             dialogue.CommencerDialogue();
             if(fonctionFinDialogue != null)
-                dialogue.OnDialogueFin.AddListener(()=> { fonctionFinDialogue(); });
+                dialogue.OnDialogueFin.AddListener(fonctionFinDialogue);
         }
         public void FinDialogue()
         {
