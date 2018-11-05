@@ -30,21 +30,33 @@ namespace Wolf.NPC
 
         public void Start()
         {
+
             attendrePosition(GameObject.Find("UEUE"),false);
+
+            //FlanerBatiment(batiment.gameObject, false);
+            //Time.timeScale = 5;
+
 
         }
 
         public void Update()
         {
+
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
                 /*Si le batiment a une porte et il va vers elle*/
+
+            //print(pointAleatoireNavMesh(DestinationCible, 5f));
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+
                 if (batiment.porte != null && DestinationCible.name == "Porte")
                 {
                     if (typeAction == "dormir")
                     {
                         AllerAuLit();
                     }
+
 
                     if (typeAction == "promenade")
                     {
@@ -80,7 +92,8 @@ namespace Wolf.NPC
                             anim.SetTrigger("attendre");
                             break;
 
-                        default: break;
+                            
+                            default: break;
                   
                     }
                 }
@@ -92,9 +105,9 @@ namespace Wolf.NPC
                 }
 
             }
+    }
+               
 
-
-        
 
         /*
         * interompt l'action en cours 
@@ -122,6 +135,8 @@ namespace Wolf.NPC
          */
         public void AllerAuLit()
         {
+
+
 
             if (batiment.porte != null)
             {
@@ -179,7 +194,11 @@ namespace Wolf.NPC
                 {
                     typeAction = "promenade";
 
+
                     if (DestinationCible != batimentCible && batimentCible.GetComponent<Batiment>().porte != null)
+
+                    if (batimentCible.GetComponent<Batiment>().porte != null)
+
                     {
                         DestinationCible = batimentCible.GetComponent<Batiment>().porte.gameObject;
                         agent.SetDestination(DestinationCible.transform.position);
@@ -187,7 +206,11 @@ namespace Wolf.NPC
                     else
                     {
                         DestinationCible = batimentCible.gameObject;
+
                         agent.SetDestination(pointAleatoireNavMesh(DestinationCible, 10));
+
+                        agent.SetDestination(pointAleatoireNavMesh(DestinationCible, 5f));
+
 
                     }
 
@@ -195,6 +218,7 @@ namespace Wolf.NPC
                 }
             }
         }
+
 
         /*
         Désigne un point où le personnage ira se promener 
@@ -212,12 +236,14 @@ namespace Wolf.NPC
         }
 
 
+
+
         public Vector3 pointAleatoireNavMesh(GameObject batimentPromenade, float rayon)
         {
-
             NavMeshHit hit;
             Vector3 aleatoire = new Vector3(Random.Range(-rayon, rayon), 0, Random.Range(-rayon, rayon));
-            NavMesh.FindClosestEdge(batimentPromenade.transform.position + aleatoire, out hit, NavMesh.AllAreas);
+            NavMesh.FindClosestEdge(batimentPromenade.transform.position, out hit, NavMesh.AllAreas);
+
             return hit.position;
         }
 

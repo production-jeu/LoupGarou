@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114452450460993230}
   - component: {fileID: 114435456995289584}
   - component: {fileID: 114857230681504044}
+  - component: {fileID: 114870494658202692}
   - component: {fileID: 82121162543615246}
   - component: {fileID: 82752685745760788}
   m_Layer: 0
@@ -265,7 +266,7 @@ MonoBehaviour:
   textManager: {fileID: 114428947825054028}
   timeManager: {fileID: 114452450460993230}
   popupManager: {fileID: 0}
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 114435456995289584}
   uiManager: {fileID: 0}
 --- !u!114 &114428947825054028
 MonoBehaviour:
@@ -290,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294fdedf40e4edb49a4ac69d195a34c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  enDialogue: 0
 --- !u!114 &114452450460993230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,6 +308,8 @@ MonoBehaviour:
   lune: {fileID: 0}
   skyJour: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   skyNight: {fileID: 2100000, guid: d07d2172e76d3fa429e80a14d2ae3616, type: 2}
+  Timescale: 45
+  Temps_Fige: 0
 --- !u!114 &114857230681504044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,3 +322,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listeTextes: []
+--- !u!114 &114870494658202692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823716666899326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf476affb5faa2428cb50cb8e74603c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maisons: []
+  personnages: []
