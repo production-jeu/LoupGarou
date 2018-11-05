@@ -4,6 +4,7 @@ using UnityEngine;
 using William.MouseManager;
 using William.Utils;
 using Wolf.Interaction;
+using Wolf.JoueurNamespace;
 
 namespace Wolf
 {
@@ -11,7 +12,7 @@ namespace Wolf
     /**
       * Classe Joueur qui s'occupe de tout la logique relative au joueur
       * @author William Gingras
-      * @version 2018-09-03
+      * @version 2018-10-22
       */
     public class Joueur : MonoBehaviour
     {
@@ -30,10 +31,11 @@ namespace Wolf
         public Camera cameraJoueur;                            // Référence à la Camera du joueur
         private Transform cameraTransform;                     // Pour changer la position de la caméra ( la tête du joueur )
         private bool enCourse = false;                         // Détermine si le joueur est en train de courir
+        public bool enEscalier = false;                       // Détermine si le joueur est dans une escalier
         private Rigidbody joueurRg;                            // Référence au Rigidbody du joueur
 
         [Header("Interaction")]
-        public InteractionJoueur zoneInteraction;              // Référence au script d'interaction du joueur
+        public DetectionInteraction detectionInteraction;      // Référence au script d'interaction du joueur
         public ZoneInteraction objetSelectionner;              // L'objet qui est sélectionné en ce moment. null = aucun objet
 
         /**
@@ -46,16 +48,19 @@ namespace Wolf
             instance = this;
             joueurRg = GetComponent<Rigidbody>();
             cameraTransform = transform.Find("CameraParent").transform.Find("Camera");
-            MouseManager.SetMouse(true);
-            bloquerSouris = true;
         }
 
         private void Start()
         {
-            zoneInteraction.cameraJoueur = cameraJoueur;
+            detectionInteraction.cameraJoueur = cameraJoueur;
             // Quand un objet est sélectionné avec le sélecteur, le joueur reçoit une référence de cet objet
-            zoneInteraction.OnSelectionChange.AddListener((t_objSelectionner) => {
-                if (t_objSelectionner != null)
+            detectionInteraction.OnSelectionChange.AddListener((t_objSelectionner) => 
+            {
+
+                objetSelectionner = t_objSelectionner;
+                GameManager.inst.uiManager.UpdateSelection(objetSelectionner);
+                /*
+                 if (t_objSelectionner != null)
                 {
                     if (t_objSelectionner.peutEtreUtiliser)
                     {
@@ -67,6 +72,8 @@ namespace Wolf
                 {
                     GameManager.inst.uiManager.UpdateSelection(t_objSelectionner);
                 }
+                 */
+
             });
         }
 
@@ -75,8 +82,10 @@ namespace Wolf
          * @param void
          * @return void
         **/
-        public void Initialize()
+        public void Initialisation()
         {
+            MouseManager.SetMouse(true);
+            bloquerSouris = true;
         }
 
         /**
@@ -121,9 +130,12 @@ namespace Wolf
                 // Interaction avec objet sélectionné
                 if (objetSelectionner != null)
                 {
-                    objetSelectionner.Interagir();
-                    objetSelectionner = null;
-                    zoneInteraction.objetSelectionner = null;
+                    if (objetSelectionner.peutEtreUtiliser)
+                    {
+                        objetSelectionner.Interagir();
+                        objetSelectionner = null;
+                        detectionInteraction.objetSelectionner = null;
+                    }
                 }
             }
 
@@ -150,29 +162,23 @@ namespace Wolf
             Vector3 mouvementAvant;
 
             float vitesse = (enCourse) ? vitesseCourse : vitesseMarche;
+            vitesse = (enEscalier) ? vitesseMarche*0.85f : vitesse;    // Divise la vitesse si dans l'escalier
             bool deuxDirectionEnMemeTemps = (Mathf.Abs(horiz) == 1 && Mathf.Abs(vert) == 1) ? true : false;
 
             if (Mathf.Abs(horiz) > 0 || Mathf.Abs(vert) > 0)
                 if (vitesse == vitesseMarche)
                 {
-
                     animBras.SetBool("marche", true);
                     animBras.SetBool("course", false);
-
                 }
                 else
                 {
-
                     animBras.SetBool("marche", false);
                     animBras.SetBool("course", true);
-
                 }
             else
             {
-
-                animBras.SetBool("marche", false);
-                animBras.SetBool("course", false);
-
+                FaireAnimationIdle();
             }
             mouvementDeCoter = transform.right * horiz * vitesse / ((deuxDirectionEnMemeTemps) ? 1.5f : 1);
             mouvementAvant = transform.forward * vert * vitesse / ((deuxDirectionEnMemeTemps) ? 1.5f : 1);
@@ -208,6 +214,22 @@ namespace Wolf
 
             //Rotation du corps du joueur
             transform.rotation = Quaternion.Euler(rotationCorps);
+        }
+
+        // Force simplement le joueur à faire son animation de 'idle'
+        public void FaireAnimationIdle()
+        {
+            animBras.SetBool("marche", false);
+            animBras.SetBool("course", false);
+        }
+        // Permet de rendre le joueur visible ou invisible
+        public void SetJoueurVisible(bool visible)
+        {
+            GetComponent<MeshRenderer>().enabled = visible;
+            foreach (MeshRenderer brasMesh in animBras.GetComponentsInChildren<MeshRenderer>())
+            {
+                brasMesh.enabled = visible;
+            }
         }
 
         private void ToogleCourse()

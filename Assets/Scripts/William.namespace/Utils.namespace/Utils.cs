@@ -72,6 +72,21 @@ namespace William.Utils
             return angle;
         }
 
+        // Mélanger retourner une copie d'une liste passée en paramètre et la mélanger.
+        public static List<T> MelangerListe<T>(List<T> listeOriginale)
+        {
+            List<T> nouvelleListe = new List<T>(listeOriginale);
+            for (int x = 0; x < 100; x++)
+            {
+                int indexRandom1 = Rdi(0, nouvelleListe.Count - 1);
+                int indexRandom2 = Rdi(0, nouvelleListe.Count - 1);
+                T temporaire = nouvelleListe[indexRandom1];
+                nouvelleListe[indexRandom1] = nouvelleListe[indexRandom2];
+                nouvelleListe[indexRandom2] = temporaire;
+            }
+            return nouvelleListe;
+        }
+
     }
 
 }

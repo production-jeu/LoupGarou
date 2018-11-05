@@ -40,9 +40,13 @@ namespace Wolf
             uiManager.Initialisation();
             soundManager.Initialisation();
             timeManager.Initialisation();
-            popupManager.Initialisation();
+            joueur.Initialisation();
             textManager.Initialisation();
+            dialogueManager.Initialisation();
+            popupManager.Initialisation();
+            village.Initialisation();
             // Fade onStart
+            // uiManager.image_fondNoir.gameObject.SetActive(true); uiManager.image_fondNoir.GetComponent<Animator>().Play("anim_nouveauJour", -1, 0);
             //uiManager.image_fondNoir.gameObject.SetActive(true);
             //uiManager.image_fondNoir.GetComponent<Animator>().Play("anim_nouveauJour", -1, 0);
         }
@@ -56,6 +60,11 @@ namespace Wolf
         {
             //timeManager.Dormir();
             uiManager.Dormir();
+        }
+
+        public void NuitCommence()
+        {
+
         }
 
     }

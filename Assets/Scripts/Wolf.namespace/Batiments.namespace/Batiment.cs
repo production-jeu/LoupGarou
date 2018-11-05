@@ -7,6 +7,7 @@ namespace Wolf.Batiments
 {
     public class Batiment : MonoBehaviour
     {
+        
         public InteractionPorte porte;
         public bool batimentOuvert;
         public virtual void Initialisation()
