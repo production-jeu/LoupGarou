@@ -8,6 +8,7 @@ TagManager:
   - joueur
   - zoneInteraction
   - escaliers
+  - maison
   layers:
   - Default
   - TransparentFX

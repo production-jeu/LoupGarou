@@ -9,5 +9,7 @@ namespace Wolf.Batiments
     public class Maison : BatimentAvecPorte
     {
         public InteractionLit lit;
+        public bool estAttribuer;
+        
     }
 }
