@@ -32,7 +32,7 @@ namespace Wolf.Interaction.Dialogues
                             // Choix 2 et texte
                             new EtapeDialogue("Henry - Forgeron", "Franchement, vous êtes nouveau ici! Ne poussez pas votre chance!"))),
                         // Réponse 2 et texte
-                        new EtapeDialogue("Henry - Forgeron", "Dégagez d'ici si vous n'êtez même pas capable d'avoir une conversation civilizée!")
+                        new EtapeDialogue("Henry - Forgeron", "Dégagez d'ici si vous n'êtez même pas capable d'avoir une conversation civilisée!")
            )));
 
             // ====
