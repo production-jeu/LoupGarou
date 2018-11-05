@@ -30,13 +30,9 @@ namespace Wolf.NPC
 
         public void Start()
         {
-
-            attendrePosition(GameObject.Find("UEUE"),false);
-
             //FlanerBatiment(batiment.gameObject, false);
             //Time.timeScale = 5;
-
-
+            attendrePosition(DestinationCible, false);
         }
 
         public void Update()
