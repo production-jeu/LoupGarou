@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: d84a73aa44dfcf847a2dd5df4cc47b03
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BezierCurve
+    100002: coin01
+    100004: coin01_001
+    100006: coin01_002
+    100008: coin01_003
+    100010: coin01_004
+    100012: coin01_005
+    100014: coin01_006
+    100016: coin01_007
+    100018: coin01_008
+    100020: coin01_009
+    100022: coin01_010
+    100024: coin01_011
+    100026: coin01_012
+    100028: coin01_013
+    100030: //RootNode
+    100032: purseHiRes
+    100034: pursesimple
+    400000: BezierCurve
+    400002: coin01
+    400004: coin01_001
+    400006: coin01_002
+    400008: coin01_003
+    400010: coin01_004
+    400012: coin01_005
+    400014: coin01_006
+    400016: coin01_007
+    400018: coin01_008
+    400020: coin01_009
+    400022: coin01_010
+    400024: coin01_011
+    400026: coin01_012
+    400028: coin01_013
+    400030: //RootNode
+    400032: purseHiRes
+    400034: pursesimple
+    2100000: unnamed
+    2100002: coin__coin02_1_png
+    2100004: purse01__purse01D_png
+    2300000: BezierCurve
+    2300002: coin01
+    2300004: coin01_001
+    2300006: coin01_002
+    2300008: coin01_003
+    2300010: coin01_004
+    2300012: coin01_005
+    2300014: coin01_006
+    2300016: coin01_007
+    2300018: coin01_008
+    2300020: coin01_009
+    2300022: coin01_010
+    2300024: coin01_011
+    2300026: coin01_012
+    2300028: coin01_013
+    2300030: purseHiRes
+    2300032: pursesimple
+    3300000: BezierCurve
+    3300002: coin01
+    3300004: coin01_001
+    3300006: coin01_002
+    3300008: coin01_003
+    3300010: coin01_004
+    3300012: coin01_005
+    3300014: coin01_006
+    3300016: coin01_007
+    3300018: coin01_008
+    3300020: coin01_009
+    3300022: coin01_010
+    3300024: coin01_011
+    3300026: coin01_012
+    3300028: coin01_013
+    3300030: purseHiRes
+    3300032: pursesimple
+    4300000: BezierCurve
+    4300002: coin01_013
+    4300004: coin01_012
+    4300006: coin01_011
+    4300008: coin01_010
+    4300010: coin01_009
+    4300012: coin01_008
+    4300014: coin01_007
+    4300016: coin01_006
+    4300018: coin01_005
+    4300020: coin01_004
+    4300022: coin01_003
+    4300024: coin01_002
+    4300026: coin01_001
+    4300028: purseHiRes
+    4300030: pursesimple
+    4300032: coin01
+    7400000: Default Take
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coin__coin02_1_png
+    second: {fileID: 2100000, guid: 0cca615862c7c30479548fc1c56456a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: purse01__purse01D_png
+    second: {fileID: 2100000, guid: 2fa8d5a014608d3479cf7bccf9710e67, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
